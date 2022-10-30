@@ -9,6 +9,7 @@
 # npm install native-base react-native-svg@12.1.1 --save --legacy-peer-deps
 # npm install react-native-vector-icons --save
 # npm install @react-navigation/bottom-tabs
+npm install @react-navigation/stack
 
 # Test
 # TestDew
