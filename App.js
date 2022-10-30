@@ -1,9 +1,10 @@
 import React from 'react';
-import { MovieDetail } from "./screens";
+import { MovieDetail,Login,Signup } from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 
 import Tabs from "./navigation/tabs";
+
 
 const Stack = createStackNavigator();
 
@@ -15,8 +16,18 @@ const App = () => {
         screenOptions={{
           headerShown: false
         }}
-        initialRouteName={'Home'}
+        initialRouteName={'Login'}
       >
+
+        <Stack.Screen
+          name="Login"
+          component={Login}
+        />
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
+        />
+
         <Stack.Screen
           name="Home"
           component={Tabs}
