@@ -1,7 +1,8 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
-import { Home } from "../screens"
+
+import { Home} from "../screens"
 import { COLORS, icons } from "../constants"
 
 import { TabIcon } from "../components"
@@ -34,7 +35,8 @@ const Tabs = () => {
                             focused={focused}
                             icon={icons.home}
                         />
-                    )
+                    ),
+                    headerShown: false
                 }}
             />
             <Tab.Screen
@@ -47,6 +49,7 @@ const Tabs = () => {
                             icon={icons.play_button}
                         />
                     )
+                
                 }}
             />
             <Tab.Screen
