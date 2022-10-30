@@ -7,9 +7,11 @@
 # npm install @react-navigation/native-stack
 # npm install react-native-screens react-native-safe-area-context
 # npm install native-base react-native-svg@12.1.1 --save --legacy-peer-deps
-# npm install react-native-vector-icons --save
-# npm install @react-navigation/bottom-tabs
+# npm install react-native-vector-icons --save 
+# npm install @react-navigation/bottom-tabs --save --legacy-peer-deps
 npm install @react-navigation/stack
+npm install react-native-reanimated react-native-gesture-handler @react-native-community/masked-view --legacy-peer-deps
+npm install react-native-linear-gradient --save
 
 # Test
 # TestDew

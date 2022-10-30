@@ -1,25 +1,34 @@
-// In App.js in a new project
-
-import * as React from 'react';
-import { View, Text,Button } from 'react-native';
+import React from 'react';
+import { MovieDetail } from "./screens";
+import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from './src/pages/Login'
-import Signup from './src/pages/Signup'
-import MainContainer from './src/MainContainer'
 
-const Stack = createNativeStackNavigator();
+import Tabs from "./navigation/tabs";
 
-function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
+
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Welcome" component={Login} />
-        <Stack.Screen name="Signup" component={Signup} />
-        <Stack.Screen name="MainContainer" component={MainContainer}/>
-      </Stack.Navigator> 
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}
+        initialRouteName={'Home'}
+      >
+        <Stack.Screen
+          name="Home"
+          component={Tabs}
+        />
+
+        <Stack.Screen
+          name="MovieDetail"
+          component={MovieDetail}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
 export default App;
