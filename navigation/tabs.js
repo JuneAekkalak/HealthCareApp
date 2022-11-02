@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
 
-import { Home} from "../screens"
+import { Home,Category} from "../screens"
 import { COLORS, icons } from "../constants"
 
 import { TabIcon } from "../components"
@@ -41,16 +41,18 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Play"
-                component={Home}
+                component={Category}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
                             icon={icons.play_button}
                         />
-                    )
+                    ),
+                    headerShown: false
                 
                 }}
+                
             />
             <Tab.Screen
                 name="Search"
