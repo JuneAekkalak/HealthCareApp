@@ -5,9 +5,9 @@
  * @format
  * @flow strict-local
  */
- import { images } from "../constants"
+import { images } from "../constants"
 import React from 'react';
-import {TouchableOpacity, StyleSheet} from 'react-native';
+import { TouchableOpacity, StyleSheet } from 'react-native';
 import {
   Button,
   Box,
