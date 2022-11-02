@@ -73,6 +73,8 @@ const styles = StyleSheet.create({
   box: {
     backgroundColor: "#FFFFFF",
     height: 60,
+    elevation: 10,
+    shadowColor: '#52006A',
   },
   row: {
     flexDirection: "row",
@@ -116,7 +118,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#105A88",
     height: 55,
     margin: 20,
-    marginHorizontal: "10%",
+    marginLeft: "10%",
     borderRadius: 25,
   },
   question: {
@@ -131,7 +133,7 @@ const styles = StyleSheet.create({
     margingBottom: 20,
     width: 75,
     height: 75,
-    marginLeft: "15%",
+    marginLeft: "20%",
   },
   emoposition: {
     justifyContent: "center"
