@@ -1,5 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { Icon } from "react-native-vector-icons"
 
 
 import { Home,Category} from "../screens"
@@ -47,9 +48,10 @@ const Tabs = () => {
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
-                            icon={icons.play_button}
+                            icon={icons.stethoscope}
                         />
                     ),
+                    //<Icon name="rocket" size={30} color="#900" />
                     headerShown: false
                 
                 }}
@@ -62,7 +64,7 @@ const Tabs = () => {
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
-                            icon={icons.search}
+                            icon={icons.calendar}
                         />
                     )
                 }}
