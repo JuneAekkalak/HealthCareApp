@@ -8,6 +8,7 @@ const people = require("../assets/images/logo/people.png");
 const head = require("../assets/images/logo/head.png");
 const body = require("../assets/images/logo/body.png");
 const leg = require("../assets/images/logo/leg.png");
+const cat = require("../assets/images/logo/cat.png");
 
 export default {
     profile_photo,
@@ -19,5 +20,6 @@ export default {
     people,
     head,
     body,
-    leg
+    leg,
+    cat
 }
