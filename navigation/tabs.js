@@ -6,6 +6,7 @@ import { Home} from "../screens"
 import { COLORS, icons } from "../constants"
 
 import { TabIcon } from "../components"
+import Profile from "../screens/Profile";
 
 const Tab = createBottomTabNavigator()
 
@@ -66,14 +67,15 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Profile"
-                component={Home}
+                component={Profile}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
                             icon={icons.profile}
                         />
-                    )
+                    ),
+                    headerShown: false
                 }}
             />
         </Tab.Navigator>
