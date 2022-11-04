@@ -3,7 +3,7 @@ import MovieDetail from "./MovieDetail"
 import Login  from "./Login"
 import Signup  from "./Signup"
 import Category from "./Category"
-import profile from "./Profile"
+import Profile from "./Profile"
 
 export {
     Login,
@@ -11,5 +11,5 @@ export {
     Home,
     MovieDetail,
     Category,
-    profile
+    Profile
 };
