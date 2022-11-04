@@ -1,13 +1,13 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { Icon } from "react-native-vector-icons"
+// import { Icon } from "react-native-vector-icons"
 
 
-import { Home,Category} from "../screens"
+import { Home,Category,Profile} from "../screens"
 import { COLORS, icons } from "../constants"
 
 import { TabIcon } from "../components"
-import Profile from "../screens/Profile";
+// import Profile from "../screens/Profile";
 
 const Tab = createBottomTabNavigator()
 
