@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View,ScrollView} from 'react-native';
 import {
   Box,
   Button,
@@ -15,6 +15,7 @@ import {images} from '../constants';
 const Category = () => {
   return (
     <NativeBaseProvider>
+      <ScrollView>
       <Center w="100%">
         <Box safeArea p="2" w="90%" maxW="290" py="5">
           <Heading size="lg" color="#105A88" fontWeight="900" fontSize={50}>
@@ -134,6 +135,7 @@ const Category = () => {
           </Text>
         </Button>
       </View>
+      </ScrollView>
     </NativeBaseProvider>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { ScrollView,View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 import { Box, Center, Heading, NativeBaseProvider } from 'native-base';
 import { images } from "../constants"
@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <NativeBaseProvider>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}>
           HealthCare
         </Text>
@@ -53,7 +53,7 @@ const Home = () => {
             </View>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     </NativeBaseProvider>
   );
 };

@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 // import { Icon } from "react-native-vector-icons"
 
 
-import { Home,Category,Profile} from "../screens"
+import { Home,Category,Profile,Date} from "../screens"
 import { COLORS, icons } from "../constants"
 
 import { TabIcon } from "../components"
@@ -59,14 +59,15 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Search"
-                component={Home}
+                component={Date}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
                             icon={icons.calendar}
                         />
-                    )
+                    ),
+                    headerShown: false
                 }}
             />
             <Tab.Screen

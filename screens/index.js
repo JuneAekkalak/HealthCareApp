@@ -4,6 +4,7 @@ import Login  from "./Login"
 import Signup  from "./Signup"
 import Category from "./Category"
 import Profile from "./Profile"
+import Date from "./Date"
 
 export {
     Login,
@@ -11,5 +12,6 @@ export {
     Home,
     MovieDetail,
     Category,
-    Profile
+    Profile,
+    Date
 };

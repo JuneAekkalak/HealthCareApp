@@ -12,6 +12,7 @@
 npm install @react-navigation/stack
 npm install react-native-reanimated react-native-gesture-handler @react-native-community/masked-view --legacy-peer-deps
 npm install react-native-linear-gradient --save
+npm install react-native-calendars
 
 # Test
 # TestDew
