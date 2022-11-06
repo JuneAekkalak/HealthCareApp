@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image,ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 
 import { Box, Center, Heading, NativeBaseProvider } from 'native-base';
 import { images_profile } from "../constants"
@@ -9,7 +9,7 @@ const Profile = () => {
     //const handleClick = () => setShow(!show);
     return (
         <NativeBaseProvider>
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <View style={styles.headerbox}>
                     <Image
                         style={styles.back}
@@ -47,7 +47,7 @@ const Profile = () => {
                     />
                     <Text style={styles.inner_big_text}>08x xxx xxxx</Text>
                 </View>
-            </View>
+            </ScrollView>
         </NativeBaseProvider>
     );
 };
