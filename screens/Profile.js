@@ -10,6 +10,7 @@ const Profile = () => {
     return (
         <NativeBaseProvider>
             <ScrollView style={styles.container}>
+
                 <View style={styles.headerbox}>
                     <Image
                         style={styles.back}
@@ -22,7 +23,7 @@ const Profile = () => {
                         style={styles.profile_pic}
                         source={images_profile.profile_pic}
                     />
-                    <Text style={{fontSize: 25, fontWeight: "bold", color: "black",paddingTop: 55}}>Jack Sparrow</Text>
+                    <Text style={{fontSize: 25, fontWeight: "bold", color: "black",paddingTop: 55}}>เเจ็ค สแปโร่</Text>
                     <Text style={{fontSize: 14, fontWeight: "bold", color: "gray",padding:10}}>25, ชาย</Text>
                     <Text style={{fontSize: 14, fontWeight: "bold", color: "gray"}}>โรคประจำตัว:  หอบหืด</Text>
                 </View>
@@ -91,11 +92,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         width: "90%",
         padding: 20,
-        paddingBottom: 22,
+        paddingBottom: 20,
         borderRadius: 22,
         shadowOpacity: 80,
         elevation: 15,
         marginTop:20,
+        marginBottom:17
         
     },
     inner_big_text:{
@@ -103,9 +105,6 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: "gray",
         marginLeft: 10,
-        
-        
-        
     },
     inner_small_text:{
         fontSize: 10,

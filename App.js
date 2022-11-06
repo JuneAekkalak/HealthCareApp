@@ -4,7 +4,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 
 import Tabs from "./navigation/tabs";
-
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 
 const Stack = createStackNavigator();
 
@@ -16,6 +18,7 @@ const App = () => {
         screenOptions={{
           headerShown: false
         }}
+        
         initialRouteName={'Login'}
       >
 
@@ -37,6 +40,7 @@ const App = () => {
           name="MovieDetail"
           component={MovieDetail}
         />
+
       </Stack.Navigator>
     </NavigationContainer>
   )
