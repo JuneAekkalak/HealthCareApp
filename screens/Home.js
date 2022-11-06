@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-import { Box, Center, Heading, NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 import { images } from "../constants"
 
-const Home = () => {
+const Home = (props) => {
   // const [selectB1, setSelectB1] = React.useState(false);
   // const [selectB2, setSelectB2] = React.useState(false);
 
@@ -43,7 +43,7 @@ const Home = () => {
               <Text style={styles.question}>สบายดี</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => props.navigation.navigate('SelectSymptom')}>
             <Image
               style={styles.emotion}
               source={images.bad}
@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",
+    color:"black"
   },
   profile: {
     marginTop: 20,
