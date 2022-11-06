@@ -1,6 +1,5 @@
 # HealthCareApp
 
-'
 - Project Mobile application for SWE62-308 Mobile Device Application Development 2/2022 
 - npm i
 - npm install @react-navigation/native
@@ -13,5 +12,5 @@
 - npm install react-native-reanimated react-native-gesture-handler @react-native-community/masked-view --legacy-peer-deps
 - npm install react-native-linear-gradient --save
 - npm install react-native-calendars
-'
+
 
