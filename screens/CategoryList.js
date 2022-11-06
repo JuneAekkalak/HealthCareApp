@@ -18,7 +18,7 @@ const ListItem = ({item, selected, onPress, onLongPress}) => (
   <>
     <TouchableOpacity
       onPress={onPress}
-      onPress={onLongPress}
+      // onPress={onLongPress}
       style={styles.listItem}>
       <View style={{padding: 8}}>
         <Text style={{color: 'white'}}>{item.name}</Text>
