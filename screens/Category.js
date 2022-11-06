@@ -12,7 +12,7 @@ import {
 import {images} from '../constants';
 
 
-const Category = () => {
+const Category = (props) => {
   return (
     <NativeBaseProvider>
       <ScrollView>
@@ -29,7 +29,9 @@ const Category = () => {
         borderRadius="12"
         margin={2}
         bg="lightBlue.700"
-        padding={0}>
+        padding={0} 
+        onPress={() => props.navigation.navigate('CategoryList')}
+        >
         <View flexDirection={'row'}>
           <Image
             size={120}
@@ -56,7 +58,9 @@ const Category = () => {
         margin={2}
         bg="lightBlue.700"
         padding={0}
-        marginTop={'0'}>
+        marginTop={'0'}
+        onPress={() => props.navigation.navigate('CategoryList')}
+        >
         <View flexDirection={'row'}>
           <Center>
             <Image
@@ -84,7 +88,8 @@ const Category = () => {
         margin={2}
         padding={0}
         bg="lightBlue.700"
-        marginTop={'0'}>
+        marginTop={'0'}
+        onPress={() => props.navigation.navigate('CategoryList')}>
         <View flexDirection={'row'}>
           <Image
             width={125}
@@ -112,7 +117,9 @@ const Category = () => {
           margin={2}
           bg="lightBlue.700"
           width={180}
-          marginTop={'0'}>
+          marginTop={'0'}
+          onPress={() => props.navigation.navigate('CategoryList')}
+          >
           <Center>
             <View>
               <Text bold="900" fontSize={29} color="white">
@@ -129,7 +136,9 @@ const Category = () => {
           bg="lightBlue.700"
           width={180}
           marginTop={'0'}
-          marginLeft={'0'}>
+          marginLeft={'0'}
+          
+          >
           <Text color="white" bold="900" fontSize={29}>
             โรงพยาบาล
           </Text>
