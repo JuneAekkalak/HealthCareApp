@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Button } from 'react-native';
 
 import { Box, Center, Heading, NativeBaseProvider } from 'native-base';
 import { images_profile } from "../constants"
@@ -22,7 +22,7 @@ const Profile = () => {
                         style={styles.profile_pic}
                         source={images_profile.profile_pic}
                     />
-                    <Text style={{ fontSize: 25, fontWeight: "bold", color: "black", paddingTop: 55 }}>Jack Sparrow</Text>
+                    <Text style={{ fontSize: 25, fontWeight: "bold", color: "black", paddingTop: 55 }}>เเจ็ค สแปโร่</Text>
                     <Text style={{ fontSize: 14, fontWeight: "bold", color: "gray", padding: 10 }}>25, ชาย</Text>
                     <Text style={{ fontSize: 14, fontWeight: "bold", color: "gray" }}>โรคประจำตัว:  หอบหืด</Text>
                 </View>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#EAF4FB",
-        paddingBottom: 100,
+        paddingBottom: 40,
     },
     headerbox: {
         height: 60,
@@ -84,6 +84,10 @@ const styles = StyleSheet.create({
         top: 35,
         borderRadius: 100,
         paddingTop: -10
+    },
+    edit_pic: {
+        width: 30,
+        height: 30,
     },
     innerbox: {
         alignSelf: "center",
