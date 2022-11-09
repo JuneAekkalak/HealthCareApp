@@ -1,12 +1,12 @@
 import React from 'react';
-import {Login, Signup, SelectSymptom, CategoryList} from './screens';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {Button, StyleSheet, Alert} from 'react-native';
+import { Login, Signup, SelectSymptom, CategoryList, Maps, HospitalList, EditProfile} from './screens';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { Button, StyleSheet, Alert } from 'react-native';
 
 import Tabs from './navigation/tabs';
 
-import {LogBox} from 'react-native';
+import { LogBox } from 'react-native';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 
@@ -63,7 +63,7 @@ const App = () => {
                   Alert.alert('สำเร็จ', 'คุณบันทึกอาการสำเร็จ', [
                     {
                       text: 'Ok',
-                      onPress: () => ({CategoryList}),
+                      onPress: () => ({ CategoryList }),
                     },
                   ])
                 }
@@ -76,6 +76,31 @@ const App = () => {
           name="SelectSymptom"
           component={SelectSymptom}
         />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name="Maps"
+          component={Maps}
+        />
+
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name="HospitalList"
+          component={HospitalList}
+        />
+
+        <Stack.Screen
+          options={{
+            headerShown: true,
+          }}
+          name="EditProfile"
+          component={EditProfile}
+        />
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );

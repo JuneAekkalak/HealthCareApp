@@ -137,7 +137,7 @@ const Category = (props) => {
           width={180}
           marginTop={'0'}
           marginLeft={'0'}
-          
+          onPress={() => props.navigation.navigate('Maps')}
           >
           <Text color="white" bold="900" fontSize={29}>
             โรงพยาบาล
@@ -148,6 +148,7 @@ const Category = (props) => {
     </NativeBaseProvider>
   );
 };
+
 
 const styles = StyleSheet.create({
   center: {
