@@ -18,7 +18,7 @@ const Category = (props) => {
       <ScrollView>
       <Center w="100%">
         <Box safeArea p="2" w="90%" maxW="290" py="5">
-          <Heading size="lg" color="#105A88" fontWeight="900" fontSize={50}>
+          <Heading size="lg" color="#105A88" fontWeight="900" fontSize={50} alignSelf="center">
             HealthCare
           </Heading>
         </Box>
@@ -30,7 +30,7 @@ const Category = (props) => {
         margin={2}
         bg="lightBlue.700"
         padding={0} 
-        onPress={() => props.navigation.navigate('CategoryList')}
+        onPress={() =>  (props.navigation.navigate('CategoryList1'))}
         >
         <View flexDirection={'row'}>
           <Image
@@ -59,7 +59,7 @@ const Category = (props) => {
         bg="lightBlue.700"
         padding={0}
         marginTop={'0'}
-        onPress={() => props.navigation.navigate('CategoryList')}
+        onPress={() => props.navigation.navigate('CategoryList2')}
         >
         <View flexDirection={'row'}>
           <Center>
@@ -89,7 +89,7 @@ const Category = (props) => {
         padding={0}
         bg="lightBlue.700"
         marginTop={'0'}
-        onPress={() => props.navigation.navigate('CategoryList')}>
+        onPress={() => props.navigation.navigate('CategoryList3')}>
         <View flexDirection={'row'}>
           <Image
             width={125}
@@ -118,14 +118,14 @@ const Category = (props) => {
           bg="lightBlue.700"
           width={180}
           marginTop={'0'}
-          onPress={() => props.navigation.navigate('CategoryList')}
+          onPress={() => props.navigation.navigate('CategoryList4')}
           >
           <Center>
             <View>
               <Text bold="900" fontSize={29} color="white">
                 ทั่วไป
               </Text>
-              <Text color="white">ไข้หวัด ผิวหนัง ฯลฯ</Text>
+              <Text color="white" fontStyle="italic">ไข้หวัด ผิวหนัง ฯลฯ</Text>
             </View>
           </Center>
         </Button>

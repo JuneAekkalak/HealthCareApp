@@ -10,9 +10,10 @@ import {TabIcon} from '../components';
 
 const Tab = createBottomTabNavigator();
 
-const Tabs = () => {
+const Tabs1 = () => {
   return (
     <Tab.Navigator
+      initialRouteName={'Date'}
       tabBarOptions={{
         showLabel: false,
         style: {
@@ -71,4 +72,4 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+export default Tabs1;

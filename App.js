@@ -1,10 +1,20 @@
 import React from 'react';
-import {Login, Signup, SelectSymptom, CategoryList} from './screens';
+import {
+  Login,
+  Signup,
+  SelectSymptom,
+  CategoryList1,
+  CategoryList2,
+  CategoryList3,
+  CategoryList4,
+  Test,
+} from './screens';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {Button, StyleSheet, Alert} from 'react-native';
 
 import Tabs from './navigation/tabs';
+import TabsDefaultDate from './navigation/tabs1';
 
 import {LogBox} from 'react-native';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
@@ -12,7 +22,8 @@ LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 const Stack = createStackNavigator();
 
-const App = ({navigation,navigate}) => {
+const App = ({route, navigation}) => {
+  //const { title } = route.params;
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={'Login'}>
@@ -32,8 +43,79 @@ const App = ({navigation,navigate}) => {
         />
 
         <Stack.Screen
-          name="CategoryList"
-          component={CategoryList}
+          options={{
+            headerShown: false,
+          }}
+          name="Test"
+          component={Test}
+        />
+
+        <Stack.Screen
+          name="CategoryList1"
+          component={CategoryList1}
+          options={{
+            title: 'ศรีษะ หู ตา คอ จมูก ปาก',
+            headerStyle: {
+              textAlign: 'center',
+              backgroundColor: '#2585C0',
+            },
+            headerTitleStyle: {
+              color: 'white',
+              alignSelf: 'center',
+              fontWeight: 'bold',
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="CategoryList2"
+          component={CategoryList2}
+          options={{
+            title: 'ลำตัว ท้อง แขน มือ อวัยวะภายใน',
+            headerStyle: {
+              textAlign: 'center',
+              backgroundColor: '#2585C0',
+            },
+            headerTitleStyle: {
+              color: 'white',
+              alignSelf: 'center',
+              fontWeight: 'bold',
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="CategoryList3"
+          component={CategoryList3}
+          options={{
+            title: 'ลำตัวส่วนล่าง อวัยวะเพศ ขา เท้า',
+            headerStyle: {
+              textAlign: 'center',
+              backgroundColor: '#2585C0',
+            },
+            headerTitleStyle: {
+              color: 'white',
+              alignSelf: 'center',
+              fontWeight: 'bold',
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="CategoryList4"
+          component={CategoryList4}
+          options={{
+            title: 'ทั่วไป ผิวหนัง ฯลฯ',
+            headerStyle: {
+              textAlign: 'center',
+              backgroundColor: '#2585C0',
+            },
+            headerTitleStyle: {
+              color: 'white',
+              alignSelf: 'center',
+              fontWeight: 'bold',
+            },
+          }}
         />
 
         <Stack.Screen
@@ -46,6 +128,31 @@ const App = ({navigation,navigate}) => {
 
         <Stack.Screen
           options={{
+            headerShown: false,
+          }}
+          name="TabsDefaultDate"
+          component={TabsDefaultDate}
+        />
+        <Stack.Screen
+          name="SelectSymptom"
+          component={SelectSymptom}
+          options={({navigation}) => ({
+            headerRight: () => (
+              <Button
+                styles={styles.button}
+                onPress={() =>
+                  Alert.alert('สำเร็จ', 'คุณบันทึกอาการสำเร็จ', [
+                    {
+                      text: 'ตกลง',
+                      onPress: () => navigation.navigate('TabsDefaultDate'),
+                    },
+                  ])
+                }
+                title="เสร็จสิ้น"
+                color="#053C5F"
+                borderRadius="15"
+              />
+            ),
             title: 'เลือกอาการ',
             headerStyle: {
               textAlign: 'center',
@@ -56,25 +163,8 @@ const App = ({navigation,navigate}) => {
               alignSelf: 'center',
               fontWeight: 'bold',
             },
-            headerRight: () => (
-              <Button
-                styles={styles.button}
-                onPress={() =>
-                  Alert.alert('สำเร็จ', 'คุณบันทึกอาการสำเร็จ', [
-                    {
-                      text: 'Ok',
-                      onPress: () => ({CategoryList}),
-                    },
-                  ])
-                }
-                title="เสร็จสิ้น"
-                color="#053C5F"
-                borderRadius="15"
-              />
-            ),
-          }}
-          name="SelectSymptom"
-          component={SelectSymptom}
+            headerTitleAlign: 'center',
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>

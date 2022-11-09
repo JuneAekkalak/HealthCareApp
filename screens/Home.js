@@ -1,19 +1,21 @@
 import React from 'react';
 import { ScrollView,View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-import { NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider,Center,Box,Heading } from 'native-base';
 import { images } from "../constants"
 
 const Home = (props) => {
-  // const [selectB1, setSelectB1] = React.useState(false);
-  // const [selectB2, setSelectB2] = React.useState(false);
 
   return (
     <NativeBaseProvider>
       <ScrollView style={styles.container}>
-        <Text style={styles.header}>
-          HealthCare
-        </Text>
+      <Center w="100%">
+        <Box safeArea p="2" w="90%" maxW="290" py="5">
+          <Heading size="lg" color="#105A88" fontWeight="900" fontSize={50} alignSelf="center">
+            HealthCare
+          </Heading>
+        </Box>
+      </Center>
         <View style={styles.box}>
           <View style={styles.row}>
             <TouchableOpacity style={styles.button}>
@@ -30,9 +32,9 @@ const Home = (props) => {
             source={images.profile}
           />
         </View>
-        <View style={styles.questionBox}>
-          <Text style={styles.question}>สบายดีไหม แจ็ค ?</Text>
-        </View>
+          <View style={[styles.questionBox,styles.positionImg]}>
+            <Text style={styles.question}>สบายดีไหม แจ็ค ?</Text>
+          </View>
         <View style={[styles.row, styles.emoposition]}>
           <TouchableOpacity>
             <Image
@@ -116,10 +118,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   questionBox: {
-    backgroundColor: "#105A88",
+    backgroundColor: "#2585C0",
     height: 55,
     margin: 20,
-    marginLeft: "10%",
+    marginLeft: "9%",
+    marginRight: "9%",
     borderRadius: 25,
   },
   question: {
@@ -135,6 +138,7 @@ const styles = StyleSheet.create({
     width: 75,
     height: 75,
     marginLeft: "20%",
+    
   },
   emoposition: {
     justifyContent: "center"

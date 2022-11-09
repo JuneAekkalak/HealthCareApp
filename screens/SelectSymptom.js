@@ -7,11 +7,13 @@ import {
   TouchableOpacity,
   View,
   Image,
+  ScrollView,
+  SafeAreaView,
+
 } from 'react-native';
 
-import {Center, NativeBaseProvider} from 'native-base';
-import { data1, data2 } from '../constants/data_symptom';
-
+import {Center, NativeBaseProvider, Input} from 'native-base';
+import {data1, data2, data4, data5, data6} from '../constants/data_symptom';
 
 const ListItemIcon = ({item, selected, onPress, onLongPress}) => (
   <>
@@ -33,7 +35,7 @@ const ListItemIcon = ({item, selected, onPress, onLongPress}) => (
               margin: 8,
             }}
           />
-          <Text style={{color: 'black',marginTop:12}}>{item.name}</Text>
+          <Text style={{color: 'black', marginTop: 12}}>{item.name}</Text>
         </Center>
       </View>
       {selected && <View style={styles.overlay} />}
@@ -55,7 +57,7 @@ const ListItem = ({item, selected, onPress, onLongPress}) => (
   </>
 );
 
-const SelectSymptom = props => {
+const SelectSymptom = (props) => {
   const [selectedItems, setSelectedItems] = useState([]);
   const handleOnPress = contact => {
     if (selectedItems.length) {
@@ -81,56 +83,127 @@ const SelectSymptom = props => {
   };
 
   return (
-    
-    <NativeBaseProvider >
-        <Pressable onPress={deSelectItems} style={{flex: 1, padding: 15}}>
-        <View style={styles.container}>      
-        <Text style={styles.head}>คุณมีอาการอะไรบ้าง ?</Text>
-          <FlatList        
-            numColumns={4}
-            data={data1}
-            renderItem={({item}) => (
-              <ListItemIcon
-                onPress={() => handleOnPress(item)}
-                onPress={() => selectItems(item)}
-                selected={getSelected(item)}
-                item={item}
+    <NativeBaseProvider>
+      <SafeAreaView style={styles.container}>
+        <ScrollView>
+          <Pressable onPress={deSelectItems} style={{flex: 1, padding: 15}}>
+            <View>
+              <Center>
+                <View>
+                  <Input
+                    style={[styles.center, styles.input]}
+                    size="l"
+                    variant="rounded"
+                    w="90%"
+                    py="0"
+                    placeholder="ค้นหา  ปวดหัว ท้องเสีย เป็นหวัด"
+                    marginTop={1}
+                    marginBottom={3}
+                  />
+                </View>
+              </Center>
+
+              <Text style={styles.head}>คุณมีอาการอะไรบ้าง ?</Text>
+              <FlatList
+                numColumns={4}
+                data={data1}
+                renderItem={({item}) => (
+                  <ListItemIcon
+                    onPress={() => selectItems(item)}
+                    selected={getSelected(item)}
+                    item={item}
+                  />
+                )}
+                keyExtractor={item => item.id}
               />
-            )}
-            keyExtractor={item => item.id}
-          />
-          <Center>
-            <Text style={styles.header}>ศรีษะ หูตา คอ จมูก ปาก </Text>
-          </Center>
-          <FlatList
-            style={styles.marginTop}
-            data={data2}
-            renderItem={({item}) => (              
-              <ListItem
-                onPress={() => handleOnPress(item)}
-                onPress={() => selectItems(item)}
-                selected={getSelected(item)}
-                item={item}
+
+              <View style={[styles.title, styles.shadow]}>
+                <Text style={styles.header}>ศรีษะ หูตา คอ จมูก ปาก </Text>
+              </View>
+              <FlatList
+                style={styles.marginTop}
+                data={data2}
+                renderItem={({item}) => (
+                  <ListItem
+                    onPress={() => selectItems(item)}
+                    selected={getSelected(item)}
+                    item={item}
+                  />
+                )}
+                keyExtractor={item => item.id}
               />
-            )}
-            keyExtractor={item => item.id}
-          />
-          </View>
-        </Pressable>
+
+              <View style={[styles.title, styles.shadow]}>
+                <Text style={styles.header}>ลำตัว ท้องแขน มือ อวัยวะภายใน</Text>
+              </View>
+
+              <FlatList
+                style={styles.marginTop}
+                data={data4}
+                renderItem={({item}) => (
+                  <ListItem
+                    onPress={() => selectItems(item)}
+                    selected={getSelected(item)}
+                    item={item}
+                  />
+                )}
+                keyExtractor={item => item.id}
+              />
+
+              <View style={[styles.title, styles.shadow]}>
+                <Text style={styles.header}>
+                  ลำตัวส่วนล่าง อวัยวะเพศ ขา เท้า
+                </Text>
+              </View>
+
+              <FlatList
+                style={styles.marginTop}
+                data={data5}
+                renderItem={({item}) => (
+                  <ListItem
+                    onPress={() => selectItems(item)}
+                    selected={getSelected(item)}
+                    item={item}
+                  />
+                )}
+                keyExtractor={item => item.id}
+              />
+
+              <View style={[styles.title, styles.shadow]}>
+                <Text style={styles.header}>ทั่วไป ผิวหนัง</Text>
+              </View>
+
+              <FlatList
+                style={styles.marginTop}
+                data={data6}
+                renderItem={({item}) => (
+                  <ListItem
+                    onPress={() => selectItems(item)}
+                    selected={getSelected(item)}
+                    item={item}
+                  />
+                )}
+                keyExtractor={item => item.id}
+              />
+            </View>
+          </Pressable>
+        </ScrollView>
+      </SafeAreaView>
     </NativeBaseProvider>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#EAF4FB"
+    backgroundColor: '#EAF4FB',
+    flex: 1,
   },
   listItemIcon: {
     backgroundColor: '#EAF4FB',
     marginBottom: 10,
     overflow: 'hidden',
   },
-  listItem:{
+  listItem: {
     backgroundColor: '#EAF4FB',
     marginBottom: 10,
     overflow: 'hidden',
@@ -147,18 +220,43 @@ const styles = StyleSheet.create({
   marginTop: {
     marginTop: 0,
   },
-  header:{
-    marginTop:15,
-    marginBottom:15,
-    color:'black',
-    fontWeight: 'bold'
-  },
-  head:{
-    color:'black',
+  header: {
+    marginTop: 15,
+    marginBottom: 15,
+    color: 'black',
     fontWeight: 'bold',
-    marginBottom:15,
-    textAlign:"center"
-  }
+    textAlign: 'center',
+  },
+  head: {
+    color: 'black',
+    fontWeight: 'bold',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  input: {
+    width: 200,
+    height: 42,
+  },
+  center: {
+    textAlign: 'auto',
+  },
+  title: {
+    backgroundColor: 'white',
+    borderRadius: 9,
+    marginTop: 8,
+    marginBottom: 15,
+  },
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    color: 'black',
+  },
 });
 
 export default SelectSymptom;
