@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Button} from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Button } from 'react-native';
 
-import { Box, Center, Heading, NativeBaseProvider} from 'native-base';
+import { Box, Center, Heading, NativeBaseProvider } from 'native-base';
 import { images_profile } from "../constants"
 import { border } from 'native-base/lib/typescript/theme/styled-system';
 const Profile = (props) => {
@@ -11,12 +11,12 @@ const Profile = (props) => {
         <ScrollView>
             <View style={styles.container}>
                 <View style={styles.headerbox}>
-                    <Text style={styles.headertext}>My Profile</Text>
+                    <Text style={styles.headertext}>โปรไฟล์ส่วนตัว</Text>
                     <TouchableOpacity onPress={() => props.navigation.navigate('EditProfile')}>
                         <Image
                             style={styles.edit_pic}
                             source={images_profile.edit}
-                            // onPress={() => props.navigation.navigate('EditProfile')}
+                        // onPress={() => props.navigation.navigate('EditProfile')}
                         />
                     </TouchableOpacity>
                 </View>
@@ -87,16 +87,16 @@ const styles = StyleSheet.create({
         height: 30,
     },
     innerbox: {
-        alignSelf: "center",
-        flexDirection: "row",
-        justifyContent: "center",
-        backgroundColor: "#fff",
-        width: "90%",
+        alignSelf: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        backgroundColor: '#fff',
+        width: '90%',
         padding: 20,
-        paddingBottom: 20,
+        paddingBottom: 22,
         borderRadius: 22,
         shadowOpacity: 80,
-        elevation: 15,
+        elevation: 4,
         marginTop: 20,
     },
     inner_big_text: {
