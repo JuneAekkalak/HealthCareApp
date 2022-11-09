@@ -7,6 +7,7 @@ import { Home,Category,Profile,Date} from "../screens"
 import { COLORS, icons } from "../constants"
 
 import { TabIcon } from "../components"
+import { HeaderStyleInterpolators } from "@react-navigation/stack";
 // import Profile from "../screens/Profile";
 
 const Tab = createBottomTabNavigator()
@@ -82,6 +83,7 @@ const Tabs = () => {
                     ),
                     headerShown: false
                 }}
+
             />
         </Tab.Navigator>
     )

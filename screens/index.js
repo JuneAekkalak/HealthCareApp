@@ -7,6 +7,9 @@ import SelectSymptom from "./SelectSymptom"
 import CategoryList from "./CategoryList"
 import Profile from "./Profile"
 import Date from "./Date"
+import Maps from "./Maps"
+import HospitalList from "./HospitalList"
+import EditProfile from "./EditProfile"
 
 export {
     Login,
@@ -17,5 +20,8 @@ export {
     SelectSymptom,
     CategoryList,
     Profile,
-    Date
+    Date,
+    Maps,
+    HospitalList,
+    EditProfile
 };
