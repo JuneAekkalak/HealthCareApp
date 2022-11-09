@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image,ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 
 import { Box, Center, Heading, NativeBaseProvider } from 'native-base';
 import { images_profile } from "../constants"
@@ -8,8 +8,8 @@ const Profile = () => {
     //const [show, setShow] = React.useState(false);
     //const handleClick = () => setShow(!show);
     return (
-        <NativeBaseProvider>
-            <ScrollView style={styles.container}>
+        <ScrollView>
+            <View style={styles.container}>
                 <View style={styles.headerbox}>
                     <Image
                         style={styles.back}
@@ -22,9 +22,9 @@ const Profile = () => {
                         style={styles.profile_pic}
                         source={images_profile.profile_pic}
                     />
-                    <Text style={{fontSize: 25, fontWeight: "bold", color: "black",paddingTop: 55}}>Jack Sparrow</Text>
-                    <Text style={{fontSize: 14, fontWeight: "bold", color: "gray",padding:10}}>25, ชาย</Text>
-                    <Text style={{fontSize: 14, fontWeight: "bold", color: "gray"}}>โรคประจำตัว:  หอบหืด</Text>
+                    <Text style={{ fontSize: 25, fontWeight: "bold", color: "black", paddingTop: 55 }}>Jack Sparrow</Text>
+                    <Text style={{ fontSize: 14, fontWeight: "bold", color: "gray", padding: 10 }}>25, ชาย</Text>
+                    <Text style={{ fontSize: 14, fontWeight: "bold", color: "gray" }}>โรคประจำตัว:  หอบหืด</Text>
                 </View>
                 <View style={styles.innerbox}>
                     <Image
@@ -34,7 +34,7 @@ const Profile = () => {
                     <Text style={styles.inner_big_text}>2 มีนาคม 2002</Text>
                 </View>
                 <View style={styles.innerbox}>
-                <Image
+                    <Image
                         style={styles.inner_pic}
                         source={images_profile.location}
                     />
@@ -47,8 +47,8 @@ const Profile = () => {
                     />
                     <Text style={styles.inner_big_text}>08x xxx xxxx</Text>
                 </View>
-            </ScrollView>
-        </NativeBaseProvider>
+            </View>
+        </ScrollView>
     );
 };
 
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#EAF4FB",
+        paddingBottom: 100,
     },
     headerbox: {
         height: 60,
@@ -82,10 +83,10 @@ const styles = StyleSheet.create({
         height: 239,
         top: 35,
         borderRadius: 100,
-        paddingTop: -10 
+        paddingTop: -10
     },
-    innerbox:{
-        alignSelf:"center",
+    innerbox: {
+        alignSelf: "center",
         flexDirection: "row",
         justifyContent: "center",
         backgroundColor: "#fff",
@@ -95,25 +96,21 @@ const styles = StyleSheet.create({
         borderRadius: 22,
         shadowOpacity: 80,
         elevation: 15,
-        marginTop:20,
-        
+        marginTop: 20,
     },
-    inner_big_text:{
+    inner_big_text: {
         fontSize: 17,
         fontWeight: "bold",
         color: "gray",
         marginLeft: 10,
-        
-        
-        
     },
-    inner_small_text:{
+    inner_small_text: {
         fontSize: 10,
         fontWeight: "bold",
         color: "gray",
-        
+
     },
-    inner_pic:{
+    inner_pic: {
         width: 30,
         height: 30,
     }
