@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Button } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Button} from 'react-native';
 
 import { Box, Center, Heading, NativeBaseProvider } from 'native-base';
 import { images_profile } from "../constants"
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#EAF4FB",
-        paddingBottom: 40,
+        paddingBottom: 40
     },
     headerbox: {
         height: 60,
