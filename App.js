@@ -7,6 +7,7 @@ import {
   CategoryList2,
   CategoryList3,
   CategoryList4,
+  Maps
 } from './screens';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -41,6 +42,13 @@ const App = ({route, navigation}) => {
           component={Signup}
         />
 
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name="Maps"
+          component={Maps}
+        />
 
         <Stack.Screen
           name="CategoryList1"

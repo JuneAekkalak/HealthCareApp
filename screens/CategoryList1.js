@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     height: 55,
     justifyContent: 'center',
-    paddingLeft: 20,
+    paddingLeft: 21,
   },
   overlay: {
     position: 'absolute',

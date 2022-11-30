@@ -10,6 +10,7 @@ import CategoryList3 from "./CategoryList3"
 import CategoryList4 from "./CategoryList4"
 import Profile from "./Profile"
 import Date from "./Date"
+import Maps from "./Maps"
 
 
 
@@ -26,5 +27,6 @@ export {
     CategoryList4,
     Profile,
     Date,
+    Maps
 
 };
